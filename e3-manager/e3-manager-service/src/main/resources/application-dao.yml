@@ -1,0 +1,3 @@
+mybatis:
+#  mapper-locations: classpath:cn/e3mall/mapper/  #指定映射文件的位置
+  config-location: classpath:mybatis/SqlMapConfig.xml   #指定mybatis插件配置路径

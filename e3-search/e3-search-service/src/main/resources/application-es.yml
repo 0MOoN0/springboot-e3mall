@@ -1,0 +1,5 @@
+spring:
+  elasticsearch:
+    jest:
+      #默认uri端口是9200，但这里使用了docker，将本地9201端口映射到虚拟机9200
+      uris: http://192.168.123.122:9201/

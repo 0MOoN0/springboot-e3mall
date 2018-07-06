@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>e3-parent</artifactId>
+        <groupId>cn.e3.springboot</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../e3-parent/pom.xml</relativePath>
+    </parent>
+    <!--坐标-->
+    <artifactId>e3-manager</artifactId>
+    <groupId>cn.e3.springboot</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>e3-manager-pojo</module>
+        <module>e3-manager-dao</module>
+        <module>e3-manager-interface</module>
+        <module>e3-manager-service</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>cn.e3mall</groupId>
+            <artifactId>e3-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>

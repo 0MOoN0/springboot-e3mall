@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    druid:
+      username: root
+      password: root
+      url: jdbc:mysql:///e3mall?characterEncoding=utf-8
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource

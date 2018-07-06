@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--坐标-->
+    <groupId>cn.e3.springboot</groupId>
+    <artifactId>e3-content</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>e3-content-interface</module>
+        <module>e3-content-service</module>
+    </modules>
+    <!--父项目-->
+    <parent>
+        <artifactId>e3-parent</artifactId>
+        <groupId>cn.e3.springboot</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../e3-parent/pom.xml</relativePath>
+    </parent>
+    <dependencies>
+        <!--common工具包等依赖-->
+        <dependency>
+            <groupId>cn.e3mall</groupId>
+            <artifactId>e3-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>

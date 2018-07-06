@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>e3-search</artifactId>
+        <groupId>cn.e3.springboot</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <!--坐标-->
+    <groupId>cn.e3.springboot</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>e3-search-interface</artifactId>
+    <dependencies>
+        <!--manager-pojo-->
+        <dependency>
+            <version>0.0.1-SNAPSHOT</version>
+            <groupId>cn.e3.springboot</groupId>
+            <artifactId>e3-manager-pojo</artifactId>
+
+        </dependency>
+        <!--common-->
+        <dependency>
+            <groupId>cn.e3.springboot</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>e3-common</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
