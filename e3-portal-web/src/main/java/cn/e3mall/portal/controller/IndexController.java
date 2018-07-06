@@ -1,6 +1,7 @@
 package cn.e3mall.portal.controller;
 
 import cn.e3mall.content.service.ContentService;
+import cn.e3mall.pojo.TbContent;
 import com.alibaba.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -24,7 +25,7 @@ public class IndexController {
      */
     @RequestMapping("/index")
     public String showIndex(Model model){
-        List contentList = contentService.getContentListById(CONTENT_LUNBO_ID);
+        List<TbContent> contentList = contentService.getContentListById(CONTENT_LUNBO_ID);
         model.addAttribute("ad1List",contentList);
         return "index";
     }
