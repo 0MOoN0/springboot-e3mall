@@ -66,17 +66,27 @@ public class SearchDao {
      */
     public E3SearchResult search(Search builder) throws Exception {
         E3SearchResult E3SearchResult = new E3SearchResult();
+        long total;
+        //SearchItem集合
+        List<SearchItem> searchItemList=new ArrayList<SearchItem>();
 
         //执行查询获取结果
         SearchResult searchResult = jestClient.execute(builder);
         //获取结果总条数
-        Integer total = searchResult.getTotal();
+        //拆箱前判断Integer是否为null
+        if(null==searchResult.getTotal()){
+            String str=searchResult.getErrorMessage();
+            total=0;
+            E3SearchResult.setRecordCount(total);
+            E3SearchResult.setItemList(searchItemList);
+            return  E3SearchResult;
+        }else {
+            total=searchResult.getTotal();
+        }
         //设置E3SearchResult的总条数
         E3SearchResult.setRecordCount(total);
         //获取searchResult内容
         List<SearchResult.Hit<SearchItem, Void>> searchResultHits = searchResult.getHits(SearchItem.class);
-        //SearchItem集合
-        List<SearchItem> searchItemList=new ArrayList<SearchItem>();
         SearchItem searchItem=null;
         //遍历
         for (SearchResult.Hit<SearchItem, Void> hit: searchResultHits

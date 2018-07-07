@@ -27,6 +27,7 @@ public class SearchServiceImpl implements SearchService {
     public E3SearchResult search(String keyWord, int page, int rows) throws Exception {
         //计算page
         if (page<=0) page=1;
+
         //创建json查询表达式，查询title中的关键字
         String json="{\n" +
                 "    \"query\" : {\n" +
@@ -36,7 +37,7 @@ public class SearchServiceImpl implements SearchService {
                 "\t    \"fields\" : {\n" +
                 "\t        \"title\" : {}\n" +
                 "\t    },\n" +
-                "\t    \"pre_tags\": [\"<em style=\"color=red\">\"],\n" +
+                "\t    \"pre_tags\": [\"<em style='color=red'>\"],\n" +
                 "       \"post_tags\": [\"</em>\"]\n" +
                 "    },\n" +
                 "    \"from\":"+(page-1)*rows+",\n" +

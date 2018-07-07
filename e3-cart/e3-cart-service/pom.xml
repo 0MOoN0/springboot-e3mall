@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>e3-cart</artifactId>
+        <groupId>cn.e3.springboot</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>e3-cart-service</artifactId>
+    <groupId>cn.e3.springboot</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+    <dependencies>
+        <!--manager-dao依赖-->
+        <dependency>
+            <artifactId>e3-manager-dao</artifactId>
+            <groupId>cn.e3.springboot</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--cart-interface-->
+        <dependency>
+            <artifactId>e3-cart-interface</artifactId>
+            <groupId>cn.e3.springboot</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--dubbo、zk-->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>${dubbo.version}</version>
+            <!--排除log4j-->
+            <exclusions>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>${zkclient.version}</version>
+            <exclusions>
+                <!--排除log4j-->
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!--springboot test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
