@@ -13,7 +13,6 @@
     <groupId>cn.e3.springboot</groupId>
     <version>0.0.1-SNAPSHOT</version>
     <artifactId>e3-portal-web</artifactId>
-    <!--dubbo和zk-->
     <dependencies>
         <!--content interface-->
         <dependency>

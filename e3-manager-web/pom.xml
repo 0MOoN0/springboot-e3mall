@@ -11,6 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>e3-manager-web</artifactId>
     <dependencies>
+        <!--manager-interface-->
         <dependency>
             <artifactId>e3-manager-interface</artifactId>
             <groupId>cn.e3.springboot</groupId>
@@ -23,11 +24,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+        <!--content-interface-->
         <dependency>
             <artifactId>e3-content-interface</artifactId>
             <groupId>cn.e3.springboot</groupId>
@@ -40,11 +37,37 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--search-interface-->
+        <dependency>
+            <artifactId>e3-search-interface</artifactId>
+            <groupId>cn.e3.springboot</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+            <!--slf4j冲突-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--springboot-starter-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
         <!--dubbo和zk-->
         <dependency>
             <groupId>com.alibaba.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>${dubbo.version}</version>
+            <!--排除log4j冲突-->
+            <exclusions>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.github.sgroschupf</groupId>

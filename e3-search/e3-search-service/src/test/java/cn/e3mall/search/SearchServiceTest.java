@@ -13,26 +13,26 @@ import org.springframework.test.context.junit4.SpringRunner;
 import cn.e3mall.search.service.SearchItemService;
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 public class SearchServiceTest {
 
-    @Autowired
+/*    @Autowired
     SearchItemServiceImpl searchItemService;
 
     @Autowired
     SearchServiceImpl searchService;
 
-    @Test
+    //@Test
     public void testSearchItemService(){
         searchItemService.importAllItems();
     }
 
-    @Test
+    //@Test
     public void testSearchService() throws Exception {
         E3SearchResult macbook = searchService.search("macbook", 0, 5);
         System.out.println(macbook.getItemList());
-    }
+    }*/
 
 
 

@@ -4,11 +4,14 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.io.IOException;
 
 @EnableRabbit   //开启Rabbit
 @MapperScan("cn.e3mall.search.mapper")      //扫描mapper
+@ComponentScan("cn.e3mall.search")
 @SpringBootApplication
 public class SearchServiceStart {
 

@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import cn.e3mall.search.service.SearchService;
 
-//@Service
-@org.springframework.stereotype.Service
+@Service
+//@org.springframework.stereotype.Service
 public class SearchServiceImpl implements SearchService {
 
     @Autowired
