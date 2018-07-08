@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>e3-parent</artifactId>
+        <groupId>cn.e3.springboot</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../e3-parent/pom.xml</relativePath>
+    </parent>
+    <!--坐标-->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.e3.springboot</groupId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>e3-sso-interface</module>
+        <module>e3-sso-service</module>
+    </modules>
+    <artifactId>e3-sso</artifactId>
+
+
+</project>
