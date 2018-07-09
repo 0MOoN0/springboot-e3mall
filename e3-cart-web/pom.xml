@@ -25,10 +25,60 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--cart-interface-->
         <dependency>
             <artifactId>e3-cart-interface</artifactId>
             <groupId>cn.e3.springboot</groupId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!--sso-interface-->
+        <dependency>
+            <groupId>cn.e3.springboot</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>e3-sso-interface</artifactId>
+        </dependency>
+        <!--spring boot 热部署-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+        <!--Spring boot web starter-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--让tomcat支持jsp、jstl-->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <!--<scope>provided</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <!--dubbo and zk-->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>${zkclient.version}</version>
+        </dependency>
     </dependencies>
+    <!--springboot maven plugin-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</jvmArguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

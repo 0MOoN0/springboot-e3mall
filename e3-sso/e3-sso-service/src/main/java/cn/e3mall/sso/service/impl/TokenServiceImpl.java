@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +23,7 @@ public class TokenServiceImpl implements TokenService{
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+    @Transactional(propagation = Propagation.SUPPORTS,readOnly = true)
     @Override
     public E3Result getUserByToken(String token) {
         //从缓存中获取对象

@@ -1,6 +1,5 @@
 package cn.e3mall;
 
-import cn.e3mall.cart.service.CartService;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

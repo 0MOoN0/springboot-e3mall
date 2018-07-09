@@ -7,6 +7,8 @@ import io.searchbox.core.Search;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import cn.e3mall.search.service.SearchService;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 //@org.springframework.stereotype.Service
