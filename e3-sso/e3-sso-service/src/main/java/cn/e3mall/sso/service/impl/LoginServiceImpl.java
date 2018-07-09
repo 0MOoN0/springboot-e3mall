@@ -16,7 +16,8 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-@Service
+//@Service
+@com.alibaba.dubbo.config.annotation.Service
 public class LoginServiceImpl implements LoginService {
 
     @Autowired

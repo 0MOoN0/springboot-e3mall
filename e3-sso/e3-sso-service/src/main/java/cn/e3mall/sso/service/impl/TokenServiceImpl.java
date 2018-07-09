@@ -12,7 +12,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
 
-@Service
+//@Service
+@com.alibaba.dubbo.config.annotation.Service
 public class TokenServiceImpl implements TokenService{
 
     @Value("${SESSION_EXPIRE}")

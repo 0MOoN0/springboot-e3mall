@@ -13,7 +13,8 @@ import org.springframework.util.DigestUtils;
 import java.util.Date;
 import java.util.List;
 
-@Service
+//@Service
+@com.alibaba.dubbo.config.annotation.Service
 public class RegisterServiceImpl implements RegisterService {
 
     @Autowired
