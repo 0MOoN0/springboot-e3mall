@@ -6,8 +6,8 @@
 	<groupId>cn.e3.springboot</groupId>
 	<artifactId>e3-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
 	<name>e3-parent</name>
+	<packaging>pom</packaging>
 	<description>E3 parent project</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
