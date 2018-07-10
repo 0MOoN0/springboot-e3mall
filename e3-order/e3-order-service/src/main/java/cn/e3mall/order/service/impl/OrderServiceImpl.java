@@ -1,6 +1,5 @@
 package cn.e3mall.order.service.impl;
 
-import cn.e3mall.common.redis.JedisClient;
 import cn.e3mall.common.utils.E3Result;
 import cn.e3mall.mapper.TbOrderItemMapper;
 import cn.e3mall.mapper.TbOrderMapper;
@@ -12,14 +11,13 @@ import cn.e3mall.pojo.TbOrderShipping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
 
-@Service
+@com.alibaba.dubbo.config.annotation.Service
 public class OrderServiceImpl implements OrderService {
 
 
@@ -46,7 +44,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public E3Result createOrder(OrderInfo orderInfo) {
         //生成订单号。使用redis的incr生成。
-        if(stringRedisTemplate.hasKey(ORDER_ID_GEN_KEY)){
+        if(!stringRedisTemplate.hasKey(ORDER_ID_GEN_KEY)){
             stringRedisTemplate.opsForValue().set(ORDER_ID_GEN_KEY, ORDER_ID_START);
         }
         String orderId = stringRedisTemplate.opsForValue().increment(ORDER_ID_GEN_KEY, 5).toString();
