@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.List;
@@ -40,6 +42,7 @@ public class OrderServiceImpl implements OrderService {
     @Value("${ORDER_DETAIL_ID_GEN_KEY}")
     private String ORDER_DETAIL_ID_GEN_KEY;
 
+    @Transactional(propagation = Propagation.REQUIRED)  //开启事务
     @Override
     public E3Result createOrder(OrderInfo orderInfo) {
         //生成订单号。使用redis的incr生成。
